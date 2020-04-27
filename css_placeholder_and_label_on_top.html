@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="Tech Republic">
+    <meta property="og:title" content="Tech Republic">
+    <meta name="robots" content="index,follow">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <!-- <meta name="description" content="I am John Humbert Tandog Duran. This is my personal portfolio, I am passionate in web development, I can do front end and back end"> -->
+    <!-- <meta name="keywords" content=""> -->
+    <!-- <meta property="og:image" content="me.JPG"> -->
+
+    <!-- <link rel="revision" href="https://johnhumbertduran.github.io/MyPortfolio2.0/" />
+    <link rel="shortlink" href="https://johnhumbertduran.github.io/MyPortfolio2.0/" />
+    <link rel="canonical" href="https://johnhumbertduran.github.io/MyPortfolio2.0/" /> -->
+    <link rel="icon" type="image/png" href="../../public/im/tech republic logo.png">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --> <!-- For CDN -->
+    <link rel="stylesheet" href="../../bootstrap4.3.1/css/bootstrap.min.css"> <!-- For Offline -->
+
+    <link rel="stylesheet" href="../../public/st/user_styles.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    
+    <style>
+
+
+
+
+        /* input::-webkit-input-placeholder {
+            font-size:1em;
+            transition: top .1s, left .1s ease 0s, opacity 2s;
+        } */
+        /* input:focus::-webkit-input-placeholder {
+            font-size:.8em;
+            position: relative;
+            left: -10px;
+            top: -20px;
+            padding-bottom: 50px;
+            opacity: 0;
+        } */
+        
+        
+        
+        input::-webkit-input-placeholder {
+            font-size:1em;
+            left: 0;
+            top: 0;
+            transition: opacity .4s, left .5s, top .5s;
+        }
+        
+        input:focus::-webkit-input-placeholder {
+            font-size:.8em;
+            position: relative;
+            left: -20px;
+            top: -100px;
+            padding-bottom: 50px;
+            opacity: 1;
+        }
+        
+        input:not(:focus)::-webkit-input-placeholder {
+            font-size:1em;
+            position: relative; 
+            left: 0;
+            top: 0;
+            opacity: 1;
+        }
+        
+        #firstnamelabel{
+        opacity:0;
+        position:relative;
+        top:-75px;
+        left:5px;
+        transition: opacity .3s;
+        }
+        
+        
+        /* input[type=text]:focus{
+            box-shadow: inset 0 0 0 #ddd;
+        } */
+        
+        /* textarea:focus, 
+        textarea.form-control:focus, 
+        input.form-control:focus, 
+        input[type=text]:focus, 
+        input[type=password]:focus, 
+        input[type=email]:focus, 
+        input[type=number]:focus, 
+        [type=text].form-control:focus, 
+        [type=password].form-control:focus, 
+        [type=email].form-control:focus, 
+        [type=tel].form-control:focus, 
+        [contenteditable].form-control:focus {
+          box-shadow: inset 0 -1px 0 #ddd;
+        } */
+        </style>
+
+<script>
+    function show_field(){
+    var fieldset = document.getElementById("field");
+    // alert(this.id);
+    // setTimeout(function(){ 
+    fieldset.style.visibility = "visible";
+    // }, 500);
+    }
+    function hide_field(){
+    var fieldset = document.getElementById("field");
+    // alert(this.id);
+    fieldset.style.visibility = "none";
+    }
+    
+    // function label_block{
+    //     var firstnamelabel = document.getElementById
+    // }
+    
+    function label_block(){
+        var firstnamelabel = document.getElementById("firstnamelabel");
+        var firstname = document.getElementById("firstname");
+        if(firstname.value != ""){
+            // alert("May sueod");
+            firstnamelabel.style.opacity = 1;
+        }
+    
+    
+        
+    }
+    
+    function firstnameblur(){
+        var firstnamelabel = document.getElementById("firstnamelabel");
+        var firstname = document.getElementById("firstname");
+        if(firstname.value == ""){
+            // alert("May sueod");
+            firstnamelabel.style.opacity = 0;
+        }
+    }
+    
+    function firstnamefocus(){
+        var firstnamelabel = document.getElementById("firstnamelabel");
+        var firstname = document.getElementById("firstname");
+        if(firstname.value == ""){
+            // alert("May sueod");
+            firstnamelabel.style.opacity = 1;
+        }
+    }
+    
+    
+    </script>
+
+    <title>Placeholder Label</title>
+
+    </head>
+
+<body>
+
+
+
+<form action="">
+
+</span>
+
+<div class="col-sm-3">
+
+<br>
+<br>
+<br>
+    <div id="div" class="form-group">
+    <input type="text" class="form-control py-4 form_with_label" name="" id="firstname" alt="firstname" required placeholder="First name *" onkeyup="label_block()" onblur="firstnameblur()" onfocus="firstnamefocus()" >
+    <label for="firstname" id="firstnamelabel" alt="label" class="float-left">First name *</label>
+    </div>
+
+
+    <div class="form-group">
+    <input type="text" class="form-control py-4 form_with_label" name="" id="lastname" required placeholder="Last name">
+    </div>
+
+    <div class="form-group">
+    <input type="text" class="form-control py-4 form_with_label" name="" id="address" required placeholder="Address">
+    </div>
+
+    <div class="form-group">
+    <input type="text" class="form-control py-4 form_with_label" name="" id="city" required placeholder="City">
+    </div>
+
+</div>
+
+
+</form>
+
